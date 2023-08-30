@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container py-5">
+    <h2>Оформлення замовлення</h2>
+    <div class="row">
+        <div class="col-4 col-md-2">
+          <img src="{{ url_for('static', filename='img/'+ item[4]) }}" alt="" class="img-fluid">
+        </div>
+        <div class="col-8 col-md-10">
+          <h2  class="my-4">{{item[2]}}</h2>
+          <h3 style="color:rgb(0, 0, 0)">{{item[5]}} грн</h3>  
+          <h5 class="my-2">Розмір: {{item[7]}}</h5>
+          
+      </div>
+    <div class="row">
+        <div class="col-12 col-md my-5"></div>
+        <form action="" method="post">
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">ПІБ</label>
+                <textarea required name="name"class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Електронна адреса</label>
+                <input required name="email" class="form-control" id="exampleFormControlTextarea1" placeholder="123@gmail.com"></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Мобільний телефон</label>
+                <input required name="phone" class="form-control" id="exampleFormControlTextarea1" placeholder="+380"></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Ваше місто</label>
+                <textarea required name="city"class="form-control" id="exampleFormControlTextarea1" rows="м.Миколаїв"></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Адреса доставки</label>
+                <textarea required name="address"class="form-control" id="exampleFormControlTextarea1" rows="Пушкіньска 3А"></textarea>
+              </div>
+              <button type="submit" class="btn btn-light my-btn">Оформити замовлення</button>
+              
+        </form>
+    </div>
+</div>
+
+{% endblock content%}

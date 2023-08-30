@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container py-5">
+    <div class="row">
+        <div class="col-12 col-md-4 col-lg-6">
+          <img src="{{ url_for('static', filename='img/'+ item[4]) }}" alt="" class="img-fluid">
+        </div>
+        <div class="col-12 col-md-8 col-lg-6">
+          <h2  class="my-4">{{item[2]}}</h2>
+          <h3 style="color:rgb(0, 0, 0)">{{item[5]}} грн</h3>  
+          
+          <a class="btn btn-primary btn-lg my-3" href="{{ url_for('order',item_id = item[0]) }}" role="button">Купити</a>
+          <h5 class="my-4">В наявності: {{item[6]}}</h5>
+          <h5 class="my-4">Розмір: {{item[7]}}</h5>
+          <p class="my-4">Опис: {{item[3]}}</p>
+
+      </div>
+</div>
+
+{% endblock content%}

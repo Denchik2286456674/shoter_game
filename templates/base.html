@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  </head>
+  <body>
+       <header>
+         {% include 'menu.html' %}
+       </header>
+
+       <main>
+         {% block content %}
+             
+         {% endblock content %}
+       </main>
+
+       <footer class="conteiner text-center py-5">
+         <h4>Сайт розробив: Морощук Денис</h4>
+         <h5 class = "mb-5">&copy LOGIKA</h5>
+        <a href="https://www.flaticon.com/free-icons/hanger" title="hanger icons">Hanger icons created by Dreamstale - Flaticon</a>
+       </footer>
+       
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  </body>
+</html>
